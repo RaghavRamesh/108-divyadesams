@@ -4,7 +4,7 @@ const features = data.map((datum) => {
   return {
     'type': 'Feature',
     'properties': {
-      'description': `${datum.nameAndLocation}`,
+      'description': `<strong>${datum.temple}</strong><br><strong>${datum.thaayaar}</strong> sametha <strong>${datum.moolavar}</strong><br>${datum.district}<br>${datum.country}`,
       'icon': 'town-hall'
     },
     'geometry': {

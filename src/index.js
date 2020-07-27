@@ -2,23 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import features from './features';
-import { MAPBOX_ACCESS_TOKEN } from './mapboxAccessToken';
+import MAPBOX_ACCESS_TOKEN from './mapboxAccessToken';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+const INDIA_COORDINATES = {
+  lng: 79.1695,
+  lat: 23.1263,
+  zoom: 4.09
+};
+
 class Application extends React.Component {
   constructor(props) {
   super(props);
-    this.state = {
-      lng: 79.1695,
-      lat: 23.1263,
-      zoom: 4.09
-    };
+    this.state = INDIA_COORDINATES;
   }
 
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/light-v10',
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     });
@@ -38,7 +40,8 @@ class Application extends React.Component {
           'type': 'FeatureCollection',
           'features': features
         }
-      })
+      });
+
       // Add a layer showing the places.
       map.addLayer({
         'id': 'places',
