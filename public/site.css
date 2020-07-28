@@ -2,7 +2,7 @@
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   margin: 12px;
   background-color: #404040;
   color: #ffffff;
@@ -15,6 +15,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 400px;
   bottom: 0;
 }

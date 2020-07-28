@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import features from './features';
+import Drawer from './Drawer';
 import MAPBOX_ACCESS_TOKEN from './mapboxAccessToken';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
@@ -14,7 +15,10 @@ const INDIA_COORDINATES = {
 class Application extends React.Component {
   constructor(props) {
   super(props);
-    this.state = INDIA_COORDINATES;
+    this.state = {
+      ...INDIA_COORDINATES,
+      drawerData: null
+    }
   }
 
   componentDidMount() {
@@ -33,7 +37,7 @@ class Application extends React.Component {
       });
     });
 
-    map.on('load', function() {
+    map.on('load', () => {
       map.addSource('places', {
         'type': 'geojson',
         'data': {
@@ -53,23 +57,13 @@ class Application extends React.Component {
         }
       });
 
-      // When a click event occurs on a feature in the places layer, open a popup at the
-      // location of the feature, with description HTML from its properties.
-      map.on('click', 'places', function(e) {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = e.features[0].properties.description;
+      map.on('click', 'places', (e) => {
+        e.preventDefault();
+        const data = JSON.parse(e.features[0].properties.ddData);
 
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        new mapboxgl.Popup()
-          .setLngLat(coordinates)
-          .setHTML(description)
-          .addTo(map);
+        this.setState({
+          drawerData: data
+        });
       });
 
       // Change the cursor to a pointer when the mouse is over the places layer.
@@ -91,6 +85,7 @@ class Application extends React.Component {
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         </div>
         <div ref={el => this.mapContainer = el} className='mapContainer' />
+        <Drawer data={this.state.drawerData} />
       </div>
     )
   }
