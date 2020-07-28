@@ -829,7 +829,7 @@ export default [
     "district": "Chamoli",
     "state": "Uttarakhand",
     "country": "India",
-    "temple": "Thirupruthi(Jyothirmath) Jyotirmathd",
+    "temple": "Thirupruthi(Jyothirmath) Jyotirmath",
   },
   {
     "moolavar": "Sri Purushottama Perumal",
@@ -864,7 +864,8 @@ export default [
     },
     "district": "Mustang",
     "country": "Nepal",
-    "temple": "Thiru Saligram(Muktinath)   Muktinath Valley",
+    "temple": "Thiru Saligram(Muktinath) Muktinath Valley",
+    "video": "https://www.youtube.com/embed/6ti_eFryAEE",
   },
   {
     "moolavar": "Sri Govardhanagiridhari Perumal",
@@ -900,7 +901,7 @@ export default [
     "state": "Gujarat",
     "country": "India",
     "district": "Dwarka",
-    "temple": "Thirudwarakai(Dwarakadheesh)  Dwarka, Devbhoomit",
+    "temple": "Thirudwarakai(Dwarakadheesh) Dwarka, Devbhoomit",
   },
   {
     "moolavar": "Sri Prahlada Varada Perumal",
