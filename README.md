@@ -9,11 +9,16 @@ $ docker run -ti -p 3000:3000 -v ${PWD}:/usr/src/app -v /usr/src/app/node_module
 ```
 
 ## Production
-1. Once ready to deploy, checkout to gh-pages branch
-1. `git merge master`
-1. `docker build -t 108dd -f Dockerfile.prod`
-1. `docker run -ti -p 3000:3000 -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -v ${PWD}/build:/usr/src/app/build 108dd`
-1. Move all files except build folder in host machine to `108dd/sourcecode` directory
-1. `cp build/ . && rm build`
-1. `git push origin gh-pages` which will deploy the changes to raghavramesh.github.io/108-divyadesams
-1. `cp sourcecode/ .`
+Once ready to deploy, execute the following in the Docker host:
+```
+$ git checkout gh-pages
+$ git merge master
+$ docker build -t 108dd -f Dockerfile.prod
+$ docker run -ti -p 3000:3000 -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -v ${PWD}/build:/usr/src/app/build 108dd
+$ rsync -av --progress . /sourcecode --exclude build
+$ cp build/ .
+$ rm -rf build
+$ git push origin gh-pages
+$ cp sourcecode/ .
+$ rm -rf sourcecode
+```
