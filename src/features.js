@@ -6,7 +6,8 @@ const features = data.map((datum) => {
     'properties': {
       'ddData': datum,
       'description': `<strong>${datum.temple}</strong><br><strong>${datum.thaayaar}</strong> sametha <strong>${datum.moolavar}</strong><br>${datum.district}<br>${datum.country}`,
-      'icon': 'town-hall'
+      'icon': 'town-hall',
+      'state': datum.state ? datum.state : datum.country
     },
     'geometry': {
       'type': 'Point',

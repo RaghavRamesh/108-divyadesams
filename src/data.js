@@ -1,15 +1,25 @@
 export default [
   {
+    "no": 1,
     "moolavar": "Sri Ranganatha Perumal",
+    "moolavarAlias": "Rangarajan",
     "thaayaar": "Sri Ranganayaki",
-    "coordinates":{
-      "lat":10.8625,
-      "lng":78.689722
+    "thaayaarAlias": "Ranganayaki thaayaar",
+    "thirukolam": "Shayanathirukkolam",
+    "coordinates": {
+      "lat": 10.8625,
+      "lng": 78.689722
     },
     "district": "Tiruchirappalli",
     "temple": "Ranganathaswamy Temple, Srirangam",
+    "templeAlias": "Thiruvarangam",
+    "speciality": ["Bhoologa Vaikundam", "Periya kovil / The Kovil, Periya perumal, Periya thirumandapam, Periyavasaram, Periya thirunal, Periya viraatthi", "Most important divya desam"],
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "video": "https://www.youtube.com/embed/69zA_GEetNE",
+    "facing": "South",
+    "river": "Kaveri",
+    "alvars": ["All alvars"],
   },
   {
     "moolavar": "Sri Azhagiya Manavala Perumal",
@@ -20,7 +30,8 @@ export default [
     },
     "district": "Tiruchirappalli",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
     "moolavar": "Sri Purushottama Perumal",
@@ -31,10 +42,11 @@ export default [
     },
     "district": "Tiruchirappalli",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
-    "moolavar": "Sri Pundarikaksha Perumal ",
+    "moolavar": "Sri Pundarikaksha Perumal",
     "thaayaar": "Sri Pankaja Nayaki",
     "coordinates":{
       "lat":10.96,
@@ -42,7 +54,8 @@ export default [
     },
     "district": "Tiruchirappalli",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
     "moolavar": "Sri Sundararaja Perumal",
@@ -53,7 +66,8 @@ export default [
     },
     "district": "Tiruchirappalli",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
     "moolavar": "Sri Appakudatthan Perumal",
@@ -64,7 +78,8 @@ export default [
     },
     "district": "Thanjavur",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
     "moolavar": "Sri Hara Saabha Vimochana Perumal ",
@@ -75,7 +90,8 @@ export default [
     },
     "district": "Thanjavur",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "temple": "",
   },
   {
     "moolavar": "Sri Jagathrakshaga Perumal",
@@ -816,6 +832,7 @@ export default [
       "lat":27.43625,
       "lng":80.57052
     },
+    "temple": "",
     "state": "Uttar Pradesh",
     "country": "India",
   },
@@ -856,52 +873,84 @@ export default [
     "temple": "Thiruvadari(Badrinath) Badrinath",
   },
   {
+    "no": 101,
     "moolavar": "Sri Srimurti Perumal",
+    "moolavarAlias": "Mukthinarayana Perumal",
     "thaayaar": "Sri Sridevi",
+    "thaayaarAlias": "Sridevi Naachiyaar",
     "coordinates":{
-      "lat":28.816667,
-      "lng":83.870833
+      "lat": 28.816667,
+      "lng": 83.870833
     },
     "district": "Mustang",
     "country": "Nepal",
-    "temple": "Thiru Saligram(Muktinath) Muktinath Valley",
+    "temple": "Thiruchalagramam/Saligram (Muktinath)",
+    "region": "Muktinath Valley",
     "video": "https://www.youtube.com/embed/6ti_eFryAEE",
+    "alvars": ["Thirumangaiyalvar", "Periyalvar"],
+    "facing": "North"
   },
   {
+    "no": 102,
     "moolavar": "Sri Govardhanagiridhari Perumal",
     "thaayaar": "Sri Satyabama",
-    "coordinates":{
-      "lat":27.504756,
-      "lng":77.669646
+    "thaayaarAlias": "Satyabama Naachiyaar",
+    "vimaanam": "Govardhana",
+    "river": "Yamuna",
+    "coordinates": {
+      "lat": 27.504756,
+      "lng": 77.669646
     },
     "district": "Mathura",
-    "temple": "Thiruvadamadurai Mathura",
+    "temple": "Thiruvadamadurai/Mathura",
     "state": "Uttar Pradesh",
-    "country": "India"
+    "country": "India",
+    "region": "Mathura",
+    "video": "https://www.youtube.com/embed/PTA1zRtmjBE",
+    "speciality": ["Krishnajanmabhoomi", "Associated with all 4 yugas - Kruta (Vamana), Treta (Shatrughnan), Dwapara (Krishna), Kali (Kalki)"],
+    "notes": "Many places to worship - Mathura, Ghats, Kesava perumal, jail, forests, Gokulam, Nandavanam, Brindavanam. 7 days",
+    "alvars": ["many"],
+    "facing": ""
   },
   {
+    "no": 103,
     "moolavar": "Sri Navamohanakrishna Perumal",
-    "thaayaar": "Sri Rukmini Sathyabama",
-    "coordinates":{
-      "lat":26.95009,
-      "lng":80.43869
+    "thaayaar": "Sri Rukmini/Sri Satyabama",
+    "thaayaarAlias": "Rukmini Devi thaayar/Satyabama thaayaar",
+    "coordinates": {
+      "lat": 26.95009,
+      "lng": 80.43869
     },
     "district": "Mathura",
-    "temple": "Thiruvaipadi Gokul",
+    "temple": "Thiruvaipadi/Gokulam",
+    "region": "Gokulam",
+    "video": "https://www.youtube.com/embed/ZgfquORLAo8",
+    "vimaanam": "",
+    "speciality": ["Many asuras were killed here", "Mitthi is the prasadam", "Roll in the mud where Krishna crawled"],
+    "notes": "Many places to visit: Kusum sarovar, Imli thala, Ghats, etc.",
+    "alvars": ["Many"],
     "state": "Uttar Pradesh",
     "country": "India"
   },
   {
+    "no": 104,
     "moolavar": "Sri Dwarakadeesha Perumal",
+    "moolavarAlias": "Dwarakanaathan",
     "thaayaar": "Sri Rukmini",
-    "coordinates":{
-      "lat":22.237886,
-      "lng":68.967561
+    "coordinates": {
+      "lat": 22.237886,
+      "lng": 68.967561
     },
     "state": "Gujarat",
     "country": "India",
     "district": "Dwarka",
-    "temple": "Thirudwarakai(Dwarakadheesh) Dwarka, Devbhoomit",
+    "temple": "Thiru Dwarakai (Dwaraka)",
+    "video": "https://www.youtube.com/embed/U6cShiC9HK8",
+    "region": "Dwarka, Devbhoomi",
+    "river": "Gomati",
+    "facing": "West",
+    "alvars": ["Periyalvar", "Andal", "Nammalvar", "Thirumangaiyalvar", "Thirumadisaialvar"],
+    "speciality": ["Climb 56 steps (56 crore yaadavaas)", "Go by boat to Betdwaraka", "Dhaakoordwaraka", "Srinath - Naathadwaraka"],
   },
   {
     "moolavar": "Sri Prahlada Varada Perumal",

@@ -12,6 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Toolbar from './Toolbar';
+// import FeedbackForm from './FeedbackForm';
 
 const useStyles = makeStyles({
   drawerContent: {
@@ -101,6 +102,7 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
         <Typography variant="h6">{data?.temple}</Typography>
         {ddInfo()}
       </div>
+      {/* <FeedbackForm /> */}
     </Drawer>
   );
 }

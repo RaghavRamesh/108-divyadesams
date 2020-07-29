@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from './Toolbar';
+// import FeedbackForm from './FeedbackForm';
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
 
@@ -28,6 +29,7 @@ export default function PermanentDrawer() {
       >
         <Typography variant="body1">Click on one of the Divyadesams to view its information</Typography>
       </div>
+      {/* <FeedbackForm /> */}
     </Drawer>
   );
 }

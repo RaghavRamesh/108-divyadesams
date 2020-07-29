@@ -49,16 +49,56 @@ class Application extends React.Component {
         }
       });
 
-      // Add a layer showing the places.
       map.addLayer({
         'id': 'places',
-        'type': 'symbol',
+        'type': 'circle',
         'source': 'places',
-        'layout': {
-          'icon-image': '{icon}-15',
-          'icon-allow-overlap': true
+        'paint': {
+          // make circles larger as the user zooms from z12 to z22
+          'circle-radius': {
+            'base': 1.75,
+            'stops': [
+              [12, 6],
+              [22, 180]
+            ]
+          },
+          // color circles by ethnicity, using a match expression
+          // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+          'circle-color': [
+            'match',
+            ['get', 'state'],
+            'Tamil Nadu',
+            '#fbb03b',
+            'Andhra Pradesh',
+            '#223b53',
+            'Kerala',
+            '#e55e5e',
+            'Uttar Pradesh',
+            '#3bb2d0',
+            'Uttarakhand',
+            'green',
+            'Nepal',
+            'purple',
+            'Gujarat',
+            'blue',
+            /* other */ 'brown'
+          ]
         }
       });
+
+      // Add a layer showing the places.
+      // map.addLayer({
+      //   'id': 'places',
+      //   'type': 'symbol',
+      //   'source': 'places',
+      //   'layout': {
+      //     'icon-image': '{icon}-15',
+      //     'icon-allow-overlap': true,
+      //   },
+      //   'paint': {
+      //     'icon-color': '#f47c10'
+      //   }
+      // });
 
       // Use the data associated with the feature and use it to pass the data to the sidebar
       map.on('click', 'places', (e) => {
