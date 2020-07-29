@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-RUN npm run build
-# RUN cp /usr/src/app/build /usr/src/app
-# CMD [ "cp", "/usr/src/app/build", "/"]
+CMD ["npm", "run", "build"]
