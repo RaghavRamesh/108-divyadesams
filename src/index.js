@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
-import features from './features';
+import getFeatures from './features';
 import Sidebar from './Sidebar';
 import DDDrawer from './DDDrawer';
 import MAPBOX_ACCESS_TOKEN from './mapboxAccessToken';
@@ -19,37 +19,48 @@ class Application extends React.Component {
     this.state = {
       ...INITIAL_COORDINATES,
       drawerData: null,
-      drawerOpen: false
+      drawerOpen: false,
+      markers: {
+        'Tamil Nadu': true,
+        'Andhra Pradesh': true,
+        'Kerala': true,
+        'Gujarat': true,
+        'Uttar Pradesh': true,
+        'Uttarakhand': true,
+        'Nepal': true,
+        'Celestial Abode': true,
+      }
     }
     this.handleDrawerClose = this.handleDrawerClose.bind(this);
+    this.handleMarkersChange = this.handleMarkersChange.bind(this);
   }
 
   componentDidMount() {
-    const map = new mapboxgl.Map({
+    this.map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/light-v10',
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     });
 
-    map.on('move', () => {
+    this.map.on('move', () => {
       this.setState({
-        lng: map.getCenter().lng.toFixed(4),
-        lat: map.getCenter().lat.toFixed(4),
-        zoom: map.getZoom().toFixed(2)
+        lng: this.map.getCenter().lng.toFixed(4),
+        lat: this.map.getCenter().lat.toFixed(4),
+        zoom: this.map.getZoom().toFixed(2)
       });
     });
 
-    map.on('load', () => {
-      map.addSource('places', {
+    this.map.on('load', () => {
+      this.map.addSource('places', {
         'type': 'geojson',
         'data': {
           'type': 'FeatureCollection',
-          'features': features
+          'features': getFeatures(this.state.markers)
         }
       });
 
-      map.addLayer({
+      this.map.addLayer({
         'id': 'places',
         'type': 'circle',
         'source': 'places',
@@ -101,7 +112,7 @@ class Application extends React.Component {
       // });
 
       // Use the data associated with the feature and use it to pass the data to the sidebar
-      map.on('click', 'places', (e) => {
+      this.map.on('click', 'places', (e) => {
         e.preventDefault();
         const data = JSON.parse(e.features[0].properties.ddData);
 
@@ -112,19 +123,32 @@ class Application extends React.Component {
       });
 
       // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on('mouseenter', 'places', function() {
-        map.getCanvas().style.cursor = 'pointer';
+      this.map.on('mouseenter', 'places', () => {
+        this.map.getCanvas().style.cursor = 'pointer';
       });
 
       // Change it back to a pointer when it leaves.
-      map.on('mouseleave', 'places', function() {
-        map.getCanvas().style.cursor = '';
+      this.map.on('mouseleave', 'places', () => {
+        this.map.getCanvas().style.cursor = '';
       });
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.markers !== this.state.markers) {
+      this.map.getSource('places').setData({
+        'type': 'FeatureCollection',
+        'features': getFeatures(this.state.markers)
+      });
+    }
+  }
+
   handleDrawerClose() {
     this.setState({ drawerData: null, drawerOpen: false });
+  }
+
+  handleMarkersChange(state) {
+    this.setState({ markers: {...state} });
   }
 
   render() {
@@ -134,7 +158,7 @@ class Application extends React.Component {
           <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         </div>
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar />
+        <Sidebar markers={this.state.markers} handleMarkersChange={this.handleMarkersChange} />
         <DDDrawer
           data={this.state.drawerData}
           drawerOpen={this.state.drawerOpen}

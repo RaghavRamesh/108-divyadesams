@@ -4,6 +4,8 @@ import Toolbar from './Toolbar';
 // import FeedbackForm from './FeedbackForm';
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
+import MarkerControls from './MarkerControls';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   paper: {
@@ -15,9 +17,12 @@ const useStyles = makeStyles({
     flexShrink: 0,
     padding: '8px',
   },
+  info: {
+    margin: '24px'
+  }
 });
 
-export default function PermanentDrawer() {
+export default function PermanentDrawer({ markers, handleMarkersChange }) {
   const classes = useStyles();
 
   return (
@@ -27,7 +32,9 @@ export default function PermanentDrawer() {
         className={classes.content}
         role="presentation"
       >
-        <Typography variant="body1">Click on one of the Divyadesams to view its information</Typography>
+        <MarkerControls markers={markers} handleMarkersChange={handleMarkersChange} />
+        <Divider />
+        <Typography variant="body1" className={classes.info}>Click on one of the Divyadesams to view its information</Typography>
       </div>
       {/* <FeedbackForm /> */}
     </Drawer>
