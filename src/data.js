@@ -965,16 +965,24 @@ export default [
     "temple": "Thirusingavelkundram(Ahobilam) Ahobilam",
   },
   {
+    "no": 106,
     "moolavar": "Sri Srinivasa Perumal",
     "thaayaar": "Sri Padmavati",
-    "coordinates":{
-      "lat":13.83393,
-      "lng":79.40872
+    "coordinates": {
+      "lat": 13.83393,
+      "lng": 79.40872
     },
     "district": "Chittoor",
     "state": "Andhra Pradesh",
     "country": "India",
     "temple": "Thiruvenkadam, Tirupati",
+    "alvars": ["9 alvars except Thondaradipudialvar"],
+    "river": "",
+    "hill": "Sapthagiri",
+    "facing": "",
+    "speciality": ["All 4 yugas", "Keezhthirupathi: Govindaraja Perumal"],
+    "notes": "Worship Varahan before worshipping Perumal",
+    "video": "https://www.youtube.com/embed/bFKBLSlIMe0"
   },
   {
     "moolavar": "Sri Navamukunda Perumal",
@@ -1349,25 +1357,37 @@ export default [
     "country": "India"
   },
   {
+    "no": 107,
     "moolavar": "Sri Parkadal Natha Perumal",
+    "moolavarAlias": "Sheerabdinathan",
     "thaayaar": "Sri Kadal Magal",
-    "coordinates":{
-      "lat":0.8521,
-      "lng":103.8198
+    "vimaanam": "Ashtaangavimaanam",
+    "thaayaarAlias": "Kadal Magal Naachiyaar/Bhoomadevi",
+    "coordinates": {
+      "lat": 12,
+      "lng": 85
     },
     "district": "",
     "country": "Celestial Abode",
-    "temple": "Thirupaarkadal"
+    "temple": "Thiruppaarkadal (Sheera)",
+    "video": "https://www.youtube.com/embed/osnI8c2bbPg",
+    "speciality": [],
+    "alvars": ["Boothathalvar", "Thirumadisaialvar", "Nammalvar", "Periyalvar", "Andal", "Thondaradipodialvar", "Thirumangaialvar"]
   },
   {
+    "no": 108,
     "moolavar": "Sri Paramapadha Nathan",
+    "moolavarAlias": "Vaikunthanathan",
     "thaayaar": "Sri Paramapada Nayaki",
-    "coordinates":{
-      "lat":1.3521,
-      "lng":103.8198
+    "coordinates": {
+      "lat": 10,
+      "lng": 90
     },
     "district": "",
     "country": "Celestial Abode",
-    "temple": "Vaikundam"
+    "temple": "Thiru Paramapdadham (Vaikundam)",
+    "video": "https://www.youtube.com/embed/LRsPtuGnpvM",
+    "river": "Viraja",
+    "alvars": ["Nammalvar"]
   }
 ]
