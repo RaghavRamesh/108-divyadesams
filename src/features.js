@@ -2,8 +2,8 @@ import data from './data';
 
 export default function getFeatures(markers) {
   return data.filter((datum) => {
-    const region = datum.state ? datum.state: datum.country;
-    const selectedRegions = Object.keys(markers).filter((marker => markers[marker]));
+    const region = datum.state ? datum.state : datum.country;
+    const selectedRegions = Object.keys(markers).filter(marker => markers[marker]);
     return selectedRegions.includes(region);
   }).map((datum) => {
     const region = datum.state ? datum.state : datum.country;

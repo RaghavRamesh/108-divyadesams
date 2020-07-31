@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import getFeatures from './features';
-import Sidebar from './Sidebar';
-import DDDrawer from './DDDrawer';
+import Sidebar from './components/Sidebar';
+import DDDrawer from './components/DDDrawer';
 import MAPBOX_ACCESS_TOKEN from './mapboxAccessToken';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
@@ -154,16 +154,13 @@ class Application extends React.Component {
   render() {
     return (
       <div>
-        <div className='sidebarStyle'>
-          <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
-        </div>
-        <div ref={el => this.mapContainer = el} className='mapContainer' />
         <Sidebar markers={this.state.markers} handleMarkersChange={this.handleMarkersChange} />
         <DDDrawer
           data={this.state.drawerData}
           drawerOpen={this.state.drawerOpen}
           handleDrawerClose={this.handleDrawerClose}
         />
+        <div ref={el => this.mapContainer = el} className='mapContainer' />
       </div>
     )
   }

@@ -38,5 +38,5 @@ installation in my local machine (and I'm not motivated to fix it).
   ```
 1. Push to deploy:
   ```
-  108dd (gh-pages) git push origin gh-pages
+  108dd (gh-pages) $ git push origin gh-pages
   ```

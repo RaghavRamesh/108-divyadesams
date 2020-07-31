@@ -861,16 +861,23 @@ export default [
     "temple": "Thirukkandamenum Kadinagar  Devaprayag, Tehrid",
   },
   {
+    "no": 100,
     "moolavar": "Sri Badrinarayana Perumal",
+    "moolavarAlias": "Badri Vishal/Nara narayana Perumal",
     "thaayaar": "Sri Aravindhavalli",
-    "coordinates":{
-      "lat":30.744695,
-      "lng":79.491175
+    "coordinates": {
+      "lat": 30.744695,
+      "lng": 79.491175
     },
     "district": "Chamoli",
     "state": "Uttarakhand",
     "country": "India",
-    "temple": "Thiruvadari(Badrinath) Badrinath",
+    "region": "Badrinath",
+    "temple": "Thiruvadariyasramam (Badrinath)",
+    "video": "https://www.youtube.com/embed/EHjpp0uwb1w",
+    "river": "Alakananda",
+    "notes": "Should stay at least 3 days but it gets quite cold, Tapthakundam (hot spring), must bathe in Alakananda or at least Tapthakundam, Kuberan, Garudan, Uddhavan, Naradar, Badri, Nara, Narayanan",
+    "alvars": ["Thirumangaiyalvar"]
   },
   {
     "no": 101,
