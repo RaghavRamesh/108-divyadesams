@@ -93,7 +93,7 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
 
   return (
     <Drawer open={drawerOpen} onClose={handleDrawerClose}>
-      <Toolbar backButton={backButton} heading={data?.temple.split(" ")[0]} />
+      <Toolbar backButton={backButton} heading={data?.no || data?.temple} />
       <div
         className={classes.drawerContent}
         role="presentation"

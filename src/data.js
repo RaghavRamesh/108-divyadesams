@@ -858,28 +858,46 @@ export default [
     "alvars": ["Thirumangaialvar"]
   },
   {
+    "no": 98,
     "moolavar": "Sri Paramapurusha Perumal",
     "thaayaar": "Sri Parimalavalli",
-    "coordinates":{
-      "lat":29.92981,
-      "lng":79.42245
+    "facing": "East",
+    "kolam": "Amarnda Thirukkolam",
+    "coordinates": {
+      "lat": 29.92981,
+      "lng": 79.42245
     },
     "district": "Chamoli",
     "state": "Uttarakhand",
     "country": "India",
-    "temple": "Thirupruthi(Jyothirmath) Jyotirmath",
+    "region": "Jyotirmath",
+    "temple": "Thiruppirudi (Nanda Prayag)",
+    "video": "https://www.youtube.com/embed/s1yYrQh_YrU?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "speciality": ["Unlike how the pashurams describe", "1st pashuram of Thirumangaialvar"],
+    "notes": "200-250 miles but takes 18-20 hours, scary roads",
+    "river": "Ganga",
+    "alvars": ["Thirumangaialvar"]
   },
   {
+    "no": 99,
     "moolavar": "Sri Purushottama Perumal",
     "thaayaar": "Sri Pundareegavalli",
-    "coordinates":{
-      "lat":30.145556,
-      "lng":78.564444
+    "vimaanam": "Mangala vimaanam",
+    "coordinates": {
+      "lat": 30.145556,
+      "lng": 78.564444
     },
     "district": "Tehri Garhwal",
+    "region": "Tehrid",
     "state": "Uttarakhand",
     "country": "India",
-    "temple": "Thirukkandamenum Kadinagar  Devaprayag, Tehrid",
+    "river": "Bhagirathi, Alakananda join into Ganga",
+    "temple": "Thirukkandamenum Kadinagar (Devaprayag)",
+    "video": "https://www.youtube.com/embed/2R0Al3g1oHI?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "speciality": "Bindusaras",
+    "notes": "Be careful while bathing in the high-speed rivers, if unable to visit Devaprayag, chant the 10 pashurams",
+
+    "alvars": ["Periyalvar"]
   },
   {
     "no": 100,
