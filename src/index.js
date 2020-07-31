@@ -134,21 +134,17 @@ class Application extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.markers !== this.state.markers) {
-      this.map.getSource('places').setData({
-        'type': 'FeatureCollection',
-        'features': getFeatures(this.state.markers)
-      });
-    }
-  }
-
   handleDrawerClose() {
     this.setState({ drawerData: null, drawerOpen: false });
   }
 
   handleMarkersChange(state) {
-    this.setState({ markers: {...state} });
+    this.setState({ markers: {...state} }, () => {
+      this.map.getSource('places').setData({
+        'type': 'FeatureCollection',
+        'features': getFeatures(this.state.markers)
+      });
+    });
   }
 
   render() {

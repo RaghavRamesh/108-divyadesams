@@ -814,27 +814,48 @@ export default [
     "country": "India"
   },
   {
-    "moolavar": "Sri Ramachandra Perumal",
+    "no": 96,
+    "moolavar": "Sri Ramachandra Perumal/Raman Chakravarthi Thirumagan",
+    "moolavarAlias": "Raghunayaka Perumal",
+    "facing": "North",
+    "kolam": "Amarnda Thirukkolam",
     "thaayaar": "Sri Sita",
-    "coordinates":{
-      "lat":26.71481,
-      "lng":82.82272
+    "thaayaarAlias": "Sita Devi Thaayar",
+    "vimaanam": "Pushkala vimaanam",
+    "coordinates": {
+      "lat": 26.71481,
+      "lng": 82.82272
     },
     "district": "Faizabad",
     "state": "Uttar Pradesh",
     "country": "India",
-    "temple": "Thiruvayothi(Ram Janmabhoomi) Ayodhya",
+    "region": "Ayodhya",
+    "temple": "Thiruayoddhi (Ayodhya) - Ramjanmabhoomi",
+    "video": "https://www.youtube.com/embed/OYSXQOvaeb4?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "notes": "Stay at least 3 days, perform Godanam and hold a calf's tail and donate to a Brahmin, Ram Sita's Anthapuram - Kanakabhavan, Jhooladarshan, Bharath Bhavan, Lakshman Ghat, Guptarghat, Hanuman Ghat, Many sweet shops, Valmiki Bhavan that contains entire Ramayana, Ammaji Mandir, Nandhigramam",
+    "river": "Sarayu",
+    "alvars": ["Nammalvar", "Kulasekaralvar", "Thonadaradipudialvar", "Periyalvar", "Thirumangaialvar"],
+    "speciality": ["Ramjanmabhoomi", "1st Mukti Kshetram", "Undefeatable fortress with high security"]
   },
   {
+    "no": 97,
     "moolavar": "Sri Devaraja Perumal",
+    "moolavarAlias": "Varadarajan",
     "thaayaar": "Sri Harilakshmi",
-    "coordinates":{
-      "lat":27.43625,
-      "lng":80.57052
+    "vimaanam": "Srihari vimaanam",
+    "coordinates": {
+      "lat": 27.43625,
+      "lng": 80.57052
     },
-    "temple": "",
+    "temple": "Thiru Naimisharanyam",
+    "river": "Gomati",
+    "video": "https://www.youtube.com/embed/ae2JWMRfpVw?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "district": "Lakshmanapuri",
     "state": "Uttar Pradesh",
     "country": "India",
+    "speciality": ["Form: Air, forest, not idol"],
+    "region": "Near Lucknow",
+    "alvars": ["Thirumangaialvar"]
   },
   {
     "moolavar": "Sri Paramapurusha Perumal",
@@ -960,16 +981,22 @@ export default [
     "speciality": ["Climb 56 steps (56 crore yaadavaas)", "Go by boat to Betdwaraka", "Dhaakoordwaraka", "Srinath - Naathadwaraka"],
   },
   {
+    "no": 105,
     "moolavar": "Sri Prahlada Varada Perumal",
+    "moolavarAlias": "Navanarasimha Kshetram",
     "thaayaar": "Sri Amruthavalli",
-    "coordinates":{
-      "lat":15.34099,
-      "lng":79.15329
+    "coordinates": {
+      "lat": 15.34099,
+      "lng": 79.15329
     },
     "district": "Kurnool",
     "state": "Andhra Pradesh",
     "country": "India",
-    "temple": "Thirusingavelkundram(Ahobilam) Ahobilam",
+    "region": "Ahobilam",
+    "temple": "Thirusingavelkundram (Ahobilam)",
+    "video": "https://www.youtube.com/embed/T6uPr11w1rs?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "speciality": ["Ugrasthambham"],
+    "notes": "9 Narasimhanrs: Jwala, Ahobila, Kroda, Malola, Kaaranja, Bhargava, Yogananda, Malolan Serthi, Kshatravata, Pavana",
   },
   {
     "no": 106,
