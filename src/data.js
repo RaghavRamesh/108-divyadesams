@@ -1157,16 +1157,24 @@ export default [
     "country": "India"
   },
   {
+    "no": 75,
     "moolavar": "Sri Ananthapadmanabha Perumal",
+    "moolavarAlias": "Kesavan",
     "thaayaar": "Sri Harilakshmi",
-    "coordinates":{
-      "lat":8.53402,
-      "lng":76.92787
+    "coordinates": {
+      "lat": 8.53402,
+      "lng": 76.92787
     },
+    "vimaanam": "Hemakoota vimaanam",
+    "facing": "East",
+    "speciality": ["3 doors for viewing 3 parts of the body", "Till 1686 he was in Illuppamaram form, then a King built the temple for 40 years", "18 feet idol"],
     "district": "Thiruvananthapuram",
-    "temple": "Thiruvananthapuram Thiruvananthapuram",
+    "temple": "Thiruvananthapuram",
     "state": "Kerala",
-    "country": "India"
+    "country": "India",
+    "alvars": ["Nammalvar"],
+    "video": "https://www.youtube.com/embed/Ls2hhJbx9cU",
+    "region": "Thiruvananthapuram",
   },
   {
     "moolavar": "Sri Adhikesava Perumal",

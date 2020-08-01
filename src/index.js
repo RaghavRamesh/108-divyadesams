@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import getFeatures from './features';
 import Sidebar from './components/Sidebar';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import DDDrawer from './components/DDDrawer';
 import MAPBOX_ACCESS_TOKEN from './mapboxAccessToken';
+import { isMobileOrTablet } from './util';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
 const INITIAL_COORDINATES = {
   lng: 79.1695,
   lat: 23.1263,
-  zoom: 4.09
+  zoom: isMobileOrTablet() ? 3.5 : 4.09,
 };
 
 class Application extends React.Component {
@@ -149,15 +151,16 @@ class Application extends React.Component {
 
   render() {
     return (
-      <div>
-        <Sidebar markers={this.state.markers} handleMarkersChange={this.handleMarkersChange} />
+      <>
+        <CssBaseline />
+        <Sidebar className="sidebar" markers={this.state.markers} handleMarkersChange={this.handleMarkersChange} />
         <DDDrawer
           data={this.state.drawerData}
           drawerOpen={this.state.drawerOpen}
           handleDrawerClose={this.handleDrawerClose}
         />
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-      </div>
+      </>
     )
   }
 }

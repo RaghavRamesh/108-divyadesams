@@ -7,16 +7,17 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Toolbar from './Toolbar';
-// import FeedbackForm from './FeedbackForm';
+import { isMobileOrTablet } from '../util';
 
 const useStyles = makeStyles({
+  root: {
+    width: isMobileOrTablet() ? '90%' : '30%',
+  },
   drawerContent: {
-    width: 400,
     flexShrink: 0,
     padding: '8px',
   },
@@ -27,7 +28,11 @@ const useStyles = makeStyles({
     color: 'white'
   },
   video: {
-    padding: '8px'
+    width: '100%',
+    height: '75%',
+  },
+  divider: {
+    margin: '24px 0',
   }
 });
 
@@ -39,7 +44,7 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
   }
 
   const rows = [
-    createData('Temple', data?.temple),
+    createData('Temple Name', data?.temple),
     createData('Perumal', data?.moolavar),
     createData('Thaayaar', data?.thaayaar),
     createData('Location', `${data?.district} district, ${data?.state}, ${data?.country}`)
@@ -50,6 +55,14 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableBody>
+            {data?.no ? (
+              <TableRow>
+                <TableCell component="th" scope="row">
+                  No.
+                </TableCell>
+                <TableCell align="right">{data.no}</TableCell>
+              </TableRow>
+            ) : null}
             {rows.map((row) => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
@@ -63,18 +76,15 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
       </TableContainer>
       {data?.video ? (
         <>
-          <Divider />
-          <div className={classes.video}>
-            <iframe
-              width="384"
-              height="288"
-              src={data.video}
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              title="video"
-            />
-          </div>
+          <Divider className={classes.divider} />
+          <iframe
+            src={data.video}
+            className={classes.video}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="video"
+          />
         </>
       ) : null}
     </>
@@ -92,17 +102,15 @@ export default function DDDrawer ({ data, handleDrawerClose, drawerOpen }) {
   );
 
   return (
-    <Drawer open={drawerOpen} onClose={handleDrawerClose}>
-      <Toolbar backButton={backButton} heading={data?.no || data?.temple} />
+    <Drawer open={drawerOpen} onClose={handleDrawerClose} classes={{paper:classes.root}}>
+      <Toolbar backButton={backButton} heading={data?.temple || ''} />
       <div
         className={classes.drawerContent}
         role="presentation"
         classes={{modal: classes.backdrop}}
       >
-        <Typography variant="h6">{data?.temple}</Typography>
         {ddInfo()}
       </div>
-      {/* <FeedbackForm /> */}
     </Drawer>
   );
 }
