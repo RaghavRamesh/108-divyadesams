@@ -75,26 +75,25 @@ class Application extends React.Component {
               [22, 180]
             ]
           },
-          // color circles by ethnicity, using a match expression
           // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
           'circle-color': [
             'match',
             ['get', 'state'],
             'Tamil Nadu',
-            '#fbb03b',
+            '#e55e5e',
             'Andhra Pradesh',
             '#223b53',
             'Kerala',
-            '#e55e5e',
-            'Uttar Pradesh',
             '#3bb2d0',
+            'Uttar Pradesh',
+            'purple',
             'Uttarakhand',
             'green',
             'Nepal',
-            'purple',
+            'brown',
             'Gujarat',
             'blue',
-            /* other */ 'brown'
+            /* other */ '#fbb03b'
           ]
         }
       });
@@ -108,9 +107,6 @@ class Application extends React.Component {
       //     'icon-image': '{icon}-15',
       //     'icon-allow-overlap': true,
       //   },
-      //   'paint': {
-      //     'icon-color': '#f47c10'
-      //   }
       // });
 
       // Use the data associated with the feature and use it to pass the data to the sidebar

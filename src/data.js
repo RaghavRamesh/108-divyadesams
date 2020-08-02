@@ -1121,40 +1121,61 @@ export default [
     "country": "India"
   },
   {
+    "no": 72,
     "moolavar": "Sri Maayapiran Perumal",
     "thaayaar": "Sri Porkodi Naachiyaar",
-    "coordinates":{
-      "lat":9.42723,
-      "lng":76.81732
+    "facing": "East",
+    "vimaanam": "Purushotha vimaanam",
+    "coordinates": {
+      "lat": 9.42723,
+      "lng": 76.81732
     },
     "district": "Alappuzha",
-    "temple": "Thiruppuliyur Thripuliyur",
+    "region": "Thiruppuliyur Kuttanadu",
+    "temple": "Thiruppuliyur Kuttanadu",
     "state": "Kerala",
-    "country": "India"
+    "country": "India",
+    "video": "https://youtube.com/embed/1x9OoDnTXQs?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "speciality": [],
+    "alvars": []
   },
   {
+    "no": 73,
     "moolavar": "Sri Kuralappan Perumal",
+    "moolavarAlias": "Parthasarathy",
     "thaayaar": "Sri Padmasani Naachiyaar",
-    "coordinates":{
-      "lat":9.35542,
-      "lng":76.76033
+    "coordinates": {
+      "lat": 9.35542,
+      "lng": 76.76033
     },
+    "facing": "East",
+    "vimaanam": "Vaamana vimaanam",
     "district": "Pathanamthitta",
-    "temple": "Thiruvaranvilai Aranmula",
+    "temple": "Thiruvaranvilai (Aranmula)",
     "state": "Kerala",
-    "country": "India"
+    "country": "India",
+    "video": "https://www.youtube.com/embed/HUOiY2FTW6Y?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "alvars": ["Nammalvar"],
+    "river": "Pambai",
+    "speciality": ["Aananda vritthi: perumal and naachiyar happily listened to alvar sing pashurams", "Padagu potti", "Arjunar punarnirmaanam"],
   },
   {
+    "no": 74,
     "moolavar": "Sri Paambanaiyappan Perumal",
     "thaayaar": "Sri Kamalavalli Naachiyaar",
-    "coordinates":{
-      "lat":9.35542,
-      "lng":76.76031
+    "kolam": "Ninna thirukkolam",
+    "coordinates": {
+      "lat": 9.35542,
+      "lng": 76.76031
     },
     "district": "Alappuzha",
-    "temple": "Thiruvanvandoor Thiruvanvandoor",
+    "region": "Thiruvanvandoor",
+    "temple": "Thiruvanvandoor",
     "state": "Kerala",
-    "country": "India"
+    "country": "India",
+    "video": "https://www.youtube.com/embed/FrVnx_R77Qs?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "speciality": [""],
+    "river": "Pambai"
   },
   {
     "no": 75,
@@ -1177,16 +1198,25 @@ export default [
     "region": "Thiruvananthapuram",
   },
   {
+    "no": 76,
     "moolavar": "Sri Adhikesava Perumal",
+    "kolam": "Sayana thirukkolam",
     "thaayaar": "Sri Maragadhavalli",
-    "coordinates":{
-      "lat":8.36897,
-      "lng":77.24167
+    "coordinates": {
+      "lat": 8.36897,
+      "lng": 77.24167
     },
+    "facing": "West",
+    "vimaanam": "Ashtanga vimaanam",
     "district": "Kanyakumari",
-    "temple": "Thiruvattaru Thiruvattar",
+    "region": "Thiruvaattaru",
+    "temple": "Thiruvaattaru",
+    "river": "Parali, Goda",
     "state": "Tamil Nadu",
-    "country": "India"
+    "country": "India",
+    "video": "https://www.youtube.com/embed/5Q73dZXyAtM?list=PLhrdHlkOIj-XbEfcuP21IV4zdoX8ACbC8",
+    "alvars": ["Nammalvar"],
+    "speciality": ["3 dwarams", "No thirumanjanam"]
   },
   {
     "moolavar": "Sri Thiruvazhmarbhan Perumal",

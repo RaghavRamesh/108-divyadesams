@@ -27,7 +27,7 @@ installation in my local machine (and I'm not motivated to fix it).
   ```
 1. Create a container from the image which will create the artifacts in a build folder:
   ```
-  108dd (gh-pages) $ docker run -ti -p 3000:3000 -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -v ${PWD}/build:/usr/src/app/build 108dd
+  108dd (gh-pages) $ docker run -ti -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -v ${PWD}/build:/usr/src/app/build 108dd
   ```
 1. Rename "/static/js..." to "/108-divyadesams/static/js..." in the `build/index.html` file (2 such occurrences) so that when deployed, the browser knows where to look for the JS assets (raghavramesh.github.io/108-divyadesams as opposed to raghavramesh.github.io/).
 1. Delete everything except the build folder.
