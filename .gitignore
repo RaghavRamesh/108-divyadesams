@@ -1,2 +1,11 @@
-*mapboxAccessToken.js
-data/
+frontend/src/mapboxAccessToken.js
+frontend/data/
+*node_modules
+
+*.idea
+*.iml
+api/mvnw*
+api/HELP.md
+*.class
+*target
+
