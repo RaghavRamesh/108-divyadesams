@@ -1,8 +1,8 @@
 package io.github.raghavramesh.divyadesams.controller;
 
-import io.github.raghavramesh.divyadesams.exception.DivyadesamNotFoundException;
 import io.github.raghavramesh.divyadesams.model.Divyadesam;
-import io.github.raghavramesh.divyadesams.repository.DivyadesamRepository;
+import io.github.raghavramesh.divyadesams.service.DivyadesamService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,42 +10,44 @@ import java.util.List;
 @RestController
 public class DivyadesamController {
 
-    private final DivyadesamRepository repository;
-    DivyadesamController(DivyadesamRepository repository) {
-        this.repository = repository;
+    @Autowired
+    DivyadesamService service;
+
+    DivyadesamController(DivyadesamService service) {
+        this.service = service;
     }
 
     @GetMapping("/divyadesams")
     List<Divyadesam> all() {
-        return repository.findAll();
+        return service.findAll();
     }
 
     @PostMapping("/divyadesams")
-    Divyadesam newDivyadesam(@RequestBody Divyadesam newDivyadesam) {
-        return repository.save(newDivyadesam);
+    void newDivyadesam(@RequestBody Divyadesam newDivyadesam) {
+        service.saveOrUpdate(newDivyadesam);
     }
 
-    @GetMapping("/divyadesams/{id}")
-    Divyadesam one(@PathVariable Long id) {
-        return repository.findById(id).orElseThrow(() -> new DivyadesamNotFoundException(id));
-    }
-
-    @PutMapping("/divyadesams/{id}")
-    Divyadesam replaceDivyadesam(@RequestBody Divyadesam newDivyadesam, @PathVariable Long id) {
-        return repository.findById(id)
-                .map(divyadesam -> {
-                    divyadesam.setPerumal(newDivyadesam.getPerumal());
-                    divyadesam.setTemple(newDivyadesam.getTemple());
-                    return repository.save(divyadesam);
-                })
-                .orElseGet(() -> {
-                    newDivyadesam.setId(id);
-                    return repository.save(newDivyadesam);
-                });
-    }
-
-    @DeleteMapping("/divyadesams/{id}")
-    void deleteDivyadesam(@PathVariable Long id) {
-        repository.deleteById(id);
-    }
+//    @GetMapping("/divyadesams/{id}")
+//    Divyadesam one(@PathVariable Long id) {
+//        return service.findById(id).orElseThrow(() -> new DivyadesamNotFoundException(id));
+//    }
+//
+//    @PutMapping("/divyadesams/{id}")
+//    Divyadesam replaceDivyadesam(@RequestBody Divyadesam newDivyadesam, @PathVariable Long id) {
+//        service.findById(id)
+//                .map(divyadesam -> {
+//                    divyadesam.setPerumal(newDivyadesam.getPerumal());
+//                    divyadesam.setTemple(newDivyadesam.getTemple());
+//                    return service.saveOrUpdate(divyadesam);
+//                })
+//                .orElseGet(() -> {
+//                    newDivyadesam.setId(id);
+//                    return service.saveOrUpdate(newDivyadesam);
+//                });
+//    }
+//
+//    @DeleteMapping("/divyadesams/{id}")
+//    void deleteDivyadesam(@PathVariable Long id) {
+//        service.deleteById(id);
+//    }
 }
