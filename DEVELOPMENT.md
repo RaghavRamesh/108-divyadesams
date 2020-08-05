@@ -8,7 +8,7 @@
     108-divyadesams/front-end (master) $ docker build -t 108dd .
     108-divyadesams/front-end (master) $ docker run -ti -p 3000:3000 -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -e CHOKIDAR_USEPOLLING=true 108dd
     ```
-1. Visit localhost:3000
+1. Visit [localhost:3000](http://localhost:3000)
 
 ### API
 1.
@@ -16,8 +16,9 @@
     108-divyadesams (master) $ cd api
     108-divyadesams/api (master) $ mvn clean spring-boot:run
     ```
-1. API server will run in localhost:8080. `curl` or visit localhost:8080/swagger-ui.html
+1. API server will run in localhost:8080. `curl` or visit [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
+---
 
 ## Deployment
 ### Deploy Front-end to Github Pages
